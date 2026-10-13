@@ -239,7 +239,10 @@ def send_telegram(text):
         cur += line + "\n"
     parts.append(cur)
     # TELEGRAM_CHAT_ID may hold several IDs separated by commas, e.g. "111,222,333"
-    chat_ids = [c.strip() for c in chat.replace(";", ",").split(",") if c.strip()]
+    # Accept IDs separated by commas, semicolons, spaces or new lines; ignore quotes
+    import re
+    chat_ids = [c for c in re.split(r"[,;\s]+", chat.replace('"', "").replace("'", "")) if c]
+    print(f"Sending to {len(chat_ids)} chat(s): " + ", ".join("..." + c[-4:] for c in chat_ids))
     delivered = 0
     for cid in chat_ids:
         ok = True
@@ -302,7 +305,32 @@ def load_positions():
     return {}
 
 
+def test_telegram():
+    """Send a short test message to every chat ID and report the result."""
+    now = datetime.now(IST)
+    msg = (f"✅ <b>Test message</b> from your Nifty 500 Scanner bot\n"
+           f"{now:%d %b %Y, %I:%M %p} IST\n"
+           f"If you can read this, you will receive the daily 3 PM alerts.")
+    token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    if token:
+        r = requests.get(f"https://api.telegram.org/bot{token}/getMe", timeout=20)
+        if r.ok:
+            print(f"Bot token OK -> bot @{r.json()['result']['username']}")
+        else:
+            sys.exit(f"Bot token is WRONG ({r.text}). Fix the TELEGRAM_BOT_TOKEN secret.")
+    chat = os.getenv("TELEGRAM_CHAT_ID", "")
+    total = len([c for c in __import__("re").split(r"[,;\s]+", chat.replace('"', "").replace("'", "")) if c])
+    ok = send_telegram(msg)
+    if not ok:
+        sys.exit("Test message was not delivered to anyone.")
+    print("Each chat marked ✅ above received the test. Fix any chat marked with an error "
+          "(that person must press Start in your bot, or the ID is wrong).")
+
+
 def main():
+    if os.getenv("TEST_TELEGRAM", "0") == "1":
+        test_telegram()
+        return
     now = datetime.now(IST)
     today = now.strftime("%Y-%m-%d")
     positions = load_positions()
