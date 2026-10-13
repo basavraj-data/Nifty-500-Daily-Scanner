@@ -51,32 +51,55 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
 
 
 # ---------------- symbols ----------------
+UPLOADED_LIST = os.path.join(BASE, "ind_nifty500list.csv")   # optional: file you upload yourself
+
+
+def _parse_list(text):
+    df = pd.read_csv(io.StringIO(text))
+    df.columns = [c.strip() for c in df.columns]
+    if "Series" in df.columns:                              # cash segment only
+        df = df[df["Series"].astype(str).str.strip() == "EQ"]
+    return df["Symbol"].astype(str).str.strip().tolist()
+
+
 def get_symbols():
+    # 1) Try NSE / niftyindices (refreshes the list when index changes)
+    s = requests.Session()
+    s.headers.update({**UA, "Accept": "text/csv,*/*", "Referer": "https://www.nseindia.com/"})
+    try:
+        s.get("https://www.nseindia.com", timeout=15)       # picks up cookies NSE expects
+    except Exception:
+        pass
     urls = [
-        "https://www.niftyindices.com/IndexConstituent/ind_nifty500list.csv",
         "https://nsearchives.nseindia.com/content/indices/ind_nifty500list.csv",
+        "https://www.niftyindices.com/IndexConstituent/ind_nifty500list.csv",
         "https://archives.nseindia.com/content/indices/ind_nifty500list.csv",
     ]
     for u in urls:
         try:
-            r = requests.get(u, headers=UA, timeout=20)
+            r = s.get(u, timeout=20)
             r.raise_for_status()
-            df = pd.read_csv(io.StringIO(r.text))
-            df.columns = [c.strip() for c in df.columns]
-            if "Series" in df.columns:                      # cash segment only
-                df = df[df["Series"].astype(str).str.strip() == "EQ"]
-            syms = df["Symbol"].astype(str).str.strip().tolist()
+            syms = _parse_list(r.text)
             if len(syms) >= 400:
                 pd.DataFrame({"Symbol": syms}).to_csv(SYMBOLS_CACHE, index=False)
                 print(f"Loaded {len(syms)} symbols from {u}")
                 return syms
         except Exception as e:
             print(f"Symbol list failed from {u}: {e}")
-    if os.path.exists(SYMBOLS_CACHE):
-        syms = pd.read_csv(SYMBOLS_CACHE)["Symbol"].astype(str).tolist()
-        print(f"Using cached symbol list ({len(syms)})")
-        return syms
-    sys.exit("Could not get the Nifty 500 list and no cache exists.")
+
+    # 2) Fall back to a file in the repo (uploaded by you, or saved by an earlier run)
+    for path in (UPLOADED_LIST, SYMBOLS_CACHE):
+        if os.path.exists(path):
+            with open(path, encoding="utf-8-sig") as f:
+                syms = _parse_list(f.read())
+            print(f"Using symbol list from {os.path.basename(path)} ({len(syms)})")
+            return syms
+
+    msg = ("⚠️ Nifty 500 scanner: could not download the Nifty 500 list from NSE "
+           "(NSE blocks cloud servers). Download ind_nifty500list.csv from "
+           "niftyindices.com and upload it to the root of your GitHub repo.")
+    send_telegram(msg)
+    sys.exit(msg)
 
 
 # ---------------- data ----------------
@@ -242,6 +265,11 @@ def main():
 
     symbols = sorted(set(get_symbols()) | set(positions))   # keep tracking held stocks
     frames = download(symbols)
+    if len(frames) < 100:
+        msg = (f"⚠️ Nifty 500 scanner: Yahoo Finance returned data for only "
+               f"{len(frames)} stocks. Will retry at the next run.")
+        send_telegram(msg)
+        sys.exit(msg)
 
     # Skip market holidays: today's candle must exist for most stocks
     have_today = sum(1 for df in frames.values() if df.index[-1].strftime("%Y-%m-%d") == today)
