@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Nifty 500 Daily Scanner  —  EMA(61, HLC/3) + RSI(60)
+Nifty 500 Daily Scanner  —  EMA(61, HLC/3) + RSI(14) crossing above 60
 -----------------------------------------------------
-Entry : Close > EMA(61) of HLC/3   AND   RSI(60) > 60   (checked ~3:00 PM IST)
+Entry : RSI(14) crosses above 60 today (yesterday <= 60, today > 60)
+        AND daily Close > EMA(61) of HLC/3            (checked ~3:00 PM IST)
 Exit  : Close crosses below EMA(61) of HLC/3
 Alert : New entries, exits and open positions are sent to Telegram.
 
@@ -12,8 +13,6 @@ as an "entry" once, and is reported as an "exit" when it closes below the EMA.
 Env variables:
   TELEGRAM_BOT_TOKEN   bot token from @BotFather
   TELEGRAM_CHAT_ID     your chat id (or a group/channel id)
-  FRESH_ONLY=1         optional: only count an entry if the condition became
-                       true TODAY (was false yesterday). Default 0.
   FORCE=1              optional: run even if today's candle isn't found
                        (useful for testing on weekends/holidays)
 """
@@ -32,13 +31,12 @@ import yfinance as yf
 
 # ---------------- settings ----------------
 EMA_LEN = 61
-RSI_LEN = 60
+RSI_LEN = 14
 RSI_LEVEL = 60
 HISTORY = "2y"          # enough bars for EMA/RSI to settle
 CHUNK = 100             # tickers per yfinance request
 
 IST = ZoneInfo("Asia/Kolkata")
-FRESH_ONLY = os.getenv("FRESH_ONLY", "0") == "1"
 FORCE = os.getenv("FORCE", "0") == "1"
 
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -160,10 +158,11 @@ def scan(frames, positions, today):
         close, ev, rv = float(df["Close"].iloc[-1]), float(e.iloc[-1]), float(r.iloc[-1])
         if np.isnan(ev) or np.isnan(rv):
             continue
-        cond_today = close > ev and rv > RSI_LEVEL
-        cond_yday = (df["Close"].iloc[-2] > e.iloc[-2]) and (r.iloc[-2] > RSI_LEVEL)
+        rv_prev = float(r.iloc[-2])
+        rsi_cross_up = rv > RSI_LEVEL and rv_prev <= RSI_LEVEL     # RSI crossed above 60 today
+        entry_signal = rsi_cross_up and close > ev
         row = {"symbol": sym, "price": round(close, 2), "ema": round(ev, 2),
-               "rsi": round(rv, 1), "dist": round((close / ev - 1) * 100, 2)}
+               "rsi": round(rv, 1), "rsi_prev": round(rv_prev, 1), "dist": round((close / ev - 1) * 100, 2)}
 
         if sym in positions:
             pos = positions[sym]
@@ -174,7 +173,7 @@ def scan(frames, positions, today):
                 exits.append(row)
             else:
                 holding.append(row)
-        elif cond_today and (not FRESH_ONLY or not cond_yday):
+        elif entry_signal:
             entries.append(row)
 
     for row in exits:
@@ -193,13 +192,14 @@ def build_message(entries, exits, holding, now):
     h = html.escape
     lines = [f"<b>📊 Nifty 500 Scanner</b>",
              f"{now:%d %b %Y, %I:%M %p} IST",
-             f"EMA({EMA_LEN}, HLC/3) + RSI({RSI_LEN}) &gt; {RSI_LEVEL}", ""]
+             f"Entry: RSI({RSI_LEN}) crossed above {RSI_LEVEL} + Close &gt; EMA({EMA_LEN}, HLC/3)",
+             f"Exit: Close &lt; EMA({EMA_LEN}, HLC/3)", ""]
 
     lines.append(f"<b>🟢 NEW ENTRIES ({len(entries)})</b>")
     if entries:
         for x in entries:
-            lines.append(f"• <b>{h(x['symbol'])}</b>  ₹{x['price']}  | RSI {x['rsi']} "
-                         f"| {x['dist']:+.1f}% vs EMA")
+            lines.append(f"• <b>{h(x['symbol'])}</b>  ₹{x['price']}  | RSI {x['rsi_prev']}→{x['rsi']} "
+                         f"| EMA ₹{x['ema']} ({x['dist']:+.1f}%)")
     else:
         lines.append("None today")
     lines.append("")
