@@ -39,4 +39,10 @@ jobs:
           git add -A
           if git diff --cached --quiet; then echo "Nothing to save"; exit 0; fi
           git commit -m "Scan $(date -u +%F)"
-          git push || { echo "::error::Push failed. Go to Settings > Actions > General > Workflow permissions and select 'Read and write permissions'."; exit 1; }
+          # Pull any changes made to the repo while the scan was running, then push (retry up to 3 times)
+          for i in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push && exit 0
+            echo "Push attempt $i failed, retrying..."; sleep 5
+          done
+          echo "::error::Push failed. Check Settings > Actions > General > Workflow permissions = 'Read and write permissions'."
+          exit 1
