@@ -271,6 +271,30 @@ def append_log(entries, exits, today):
     df.to_csv(LOG_FILE, mode="a", header=not os.path.exists(LOG_FILE), index=False)
 
 
+def send_google_sheet(entries, exits, holding, now):
+    """Post today's results to the Google Sheet web app (optional)."""
+    url = os.getenv("GSHEET_WEBHOOK_URL", "").strip()
+    if not url:
+        print("Google Sheet not configured (GSHEET_WEBHOOK_URL missing) — skipped.")
+        return
+    payload = {"secret": os.getenv("GSHEET_SECRET", "").strip(),
+               "date": now.strftime("%Y-%m-%d"), "time": now.strftime("%H:%M"),
+               "entries": entries, "exits": exits, "open": holding}
+    try:
+        r = requests.post(url, data=json.dumps(payload, default=float),
+                          headers={"Content-Type": "application/json"}, timeout=60)
+        try:
+            res = r.json()
+        except Exception:
+            res = {"ok": False, "error": f"HTTP {r.status_code}: {r.text[:200]}"}
+        if res.get("ok"):
+            print("✅ Google Sheet updated")
+        else:
+            print("::warning::Google Sheet update failed:", res.get("error"))
+    except Exception as e:
+        print("::warning::Google Sheet update failed:", e)
+
+
 def load_positions():
     if os.path.exists(STATE_FILE):
         with open(STATE_FILE) as f:
@@ -309,6 +333,7 @@ def main():
     with open(STATE_FILE, "w") as f:
         json.dump(positions, f, indent=1, sort_keys=True)
     append_log(entries, exits, today)
+    send_google_sheet(entries, exits, holding, now)
 
 
 if __name__ == "__main__":
