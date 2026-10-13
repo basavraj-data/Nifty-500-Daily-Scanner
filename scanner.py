@@ -238,21 +238,28 @@ def send_telegram(text):
             cur = ""
         cur += line + "\n"
     parts.append(cur)
-    ok = True
-    for p in parts:
-        try:
-            r = requests.post(f"https://api.telegram.org/bot{token.strip()}/sendMessage",
-                              data={"chat_id": chat.strip(), "text": p, "parse_mode": "HTML",
-                                    "disable_web_page_preview": True}, timeout=20)
-            if not r.ok:
-                print("::error::Telegram error:", r.text)
+    # TELEGRAM_CHAT_ID may hold several IDs separated by commas, e.g. "111,222,333"
+    chat_ids = [c.strip() for c in chat.replace(";", ",").split(",") if c.strip()]
+    delivered = 0
+    for cid in chat_ids:
+        ok = True
+        for p in parts:
+            try:
+                r = requests.post(f"https://api.telegram.org/bot{token.strip()}/sendMessage",
+                                  data={"chat_id": cid, "text": p, "parse_mode": "HTML",
+                                        "disable_web_page_preview": True}, timeout=20)
+                if not r.ok:
+                    print(f"::warning::Telegram error for chat {cid}:", r.text)
+                    ok = False
+            except Exception as e:
+                print(f"::warning::Telegram error for chat {cid}:", e)
                 ok = False
-        except Exception as e:
-            print("::error::Telegram error:", e)
-            ok = False
-    if ok:
-        print("✅ Telegram message sent")
-    return ok
+        if ok:
+            delivered += 1
+            print(f"✅ Telegram message sent to chat {cid}")
+    print(f"Delivered to {delivered}/{len(chat_ids)} chats")
+    # Succeed if at least one person got it (so one blocked user can't stop the scanner)
+    return delivered > 0
 
 
 def append_log(entries, exits, today):
