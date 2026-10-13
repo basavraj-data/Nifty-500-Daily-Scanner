@@ -6,12 +6,6 @@ on:
     - cron: "25 9 * * *"     # EVERY DAY at 09:25 UTC = 2:55 PM IST (GitHub may start a few minutes late).
                              # On weekends / NSE holidays the script finds no new candle and skips automatically.
   workflow_dispatch:          # lets you run it manually from the Actions tab
-    inputs:
-      mode:
-        description: "What to run"
-        type: choice
-        options: [scan, test-telegram]
-        default: scan
 
 permissions:
   contents: write             # needed to save positions.json back to the repo
@@ -37,11 +31,9 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GSHEET_WEBHOOK_URL: ${{ secrets.GSHEET_WEBHOOK_URL }}
           GSHEET_SECRET: ${{ secrets.GSHEET_SECRET }}
-          TEST_TELEGRAM: ${{ github.event.inputs.mode == 'test-telegram' && '1' || '0' }}
         run: python scanner.py
 
       - name: Save open positions
-        if: github.event.inputs.mode != 'test-telegram'
         run: |
           git config user.name "scanner-bot"
           git config user.email "scanner-bot@users.noreply.github.com"
