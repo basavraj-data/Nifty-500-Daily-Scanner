@@ -213,19 +213,23 @@ def build_message(entries, exits, holding, now):
         lines.append("None today")
     lines.append("")
 
-    lines.append(f"<b>📌 Open positions: {len(holding)}</b>")
-    for x in holding:
-        lines.append(f"{h(x['symbol'])} {x['pnl']:+.1f}%")
+    lines.append(f"<b>📌 OPEN POSITIONS – still above EMA ({len(holding)})</b>")
+    if holding:
+        for x in holding:
+            lines.append(f"• <b>{h(x['symbol'])}</b>  ₹{x['price']}  | RSI {x['rsi']} "
+                         f"| in {x['entry_date']} @ ₹{x['entry_price']} | {x['pnl']:+.1f}%")
+    else:
+        lines.append("None")
     return "\n".join(lines)
 
 
 def send_telegram(text):
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     chat = os.getenv("TELEGRAM_CHAT_ID")
+    print(text)
     if not token or not chat:
-        print("Telegram not configured — message below:\n")
-        print(text)
-        return
+        print("::error::Telegram secrets TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID are missing.")
+        return False
     # Telegram limit is 4096 chars; split on line boundaries
     parts, cur = [], ""
     for line in text.split("\n"):
@@ -234,12 +238,21 @@ def send_telegram(text):
             cur = ""
         cur += line + "\n"
     parts.append(cur)
+    ok = True
     for p in parts:
-        r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
-                          data={"chat_id": chat, "text": p, "parse_mode": "HTML",
-                                "disable_web_page_preview": True}, timeout=20)
-        if not r.ok:
-            print("Telegram error:", r.text)
+        try:
+            r = requests.post(f"https://api.telegram.org/bot{token.strip()}/sendMessage",
+                              data={"chat_id": chat.strip(), "text": p, "parse_mode": "HTML",
+                                    "disable_web_page_preview": True}, timeout=20)
+            if not r.ok:
+                print("::error::Telegram error:", r.text)
+                ok = False
+        except Exception as e:
+            print("::error::Telegram error:", e)
+            ok = False
+    if ok:
+        print("✅ Telegram message sent")
+    return ok
 
 
 def append_log(entries, exits, today):
@@ -281,12 +294,14 @@ def main():
         frames = {s: d for s, d in frames.items() if d.index[-1].strftime("%Y-%m-%d") == today}
 
     entries, exits, holding = scan(frames, positions, today)
+    print(f"Entries {len(entries)} | Exits {len(exits)} | Open {len(holding)}")
 
+    # Only save if Telegram delivered, so no alert is ever lost
+    if not send_telegram(build_message(entries, exits, holding, now)):
+        sys.exit("Telegram message NOT delivered — positions not saved; alerts will repeat next run.")
     with open(STATE_FILE, "w") as f:
         json.dump(positions, f, indent=1, sort_keys=True)
     append_log(entries, exits, today)
-    send_telegram(build_message(entries, exits, holding, now))
-    print(f"Entries {len(entries)} | Exits {len(exits)} | Open {len(holding)}")
 
 
 if __name__ == "__main__":
