@@ -3,6 +3,14 @@
   "entry_date": "2026-10-13",
   "entry_price": 310.0
  },
+ "AXISBANK": {
+  "entry_date": "2026-10-15",
+  "entry_price": 1288.0
+ },
+ "BALRAMCHIN": {
+  "entry_date": "2026-10-15",
+  "entry_price": 726.0
+ },
  "BHARTIHEXA": {
   "entry_date": "2026-10-14",
   "entry_price": 1570.3
@@ -19,10 +27,6 @@
   "entry_date": "2026-10-13",
   "entry_price": 3152.8
  },
- "CCL": {
-  "entry_date": "2026-10-14",
-  "entry_price": 1100.6
- },
  "COFORGE": {
   "entry_date": "2026-10-13",
   "entry_price": 1929.0
@@ -30,6 +34,10 @@
  "DRREDDY": {
   "entry_date": "2026-10-13",
   "entry_price": 1240.0
+ },
+ "ECLERX": {
+  "entry_date": "2026-10-15",
+  "entry_price": 1998.2
  },
  "ELECON": {
   "entry_date": "2026-10-14",
@@ -39,6 +47,10 @@
   "entry_date": "2026-10-13",
   "entry_price": 291.75
  },
+ "GALLANTT": {
+  "entry_date": "2026-10-15",
+  "entry_price": 628.15
+ },
  "GLAND": {
   "entry_date": "2026-10-13",
   "entry_price": 3091.1
@@ -47,9 +59,9 @@
   "entry_date": "2026-10-13",
   "entry_price": 1326.0
  },
- "IDBI": {
-  "entry_date": "2026-10-14",
-  "entry_price": 90.39
+ "INFY": {
+  "entry_date": "2026-10-15",
+  "entry_price": 1110.0
  },
  "KARURVYSYA": {
   "entry_date": "2026-10-13",
@@ -75,10 +87,6 @@
   "entry_date": "2026-10-14",
   "entry_price": 185.26
  },
- "NETWEB": {
-  "entry_date": "2026-10-13",
-  "entry_price": 5054.6
- },
  "PNBHOUSING": {
   "entry_date": "2026-10-13",
   "entry_price": 1224.8
@@ -86,6 +94,10 @@
  "PVRINOX": {
   "entry_date": "2026-10-13",
   "entry_price": 1404.5
+ },
+ "RITES": {
+  "entry_date": "2026-10-15",
+  "entry_price": 214.27
  },
  "SHYAMMETL": {
   "entry_date": "2026-10-14",
@@ -95,6 +107,10 @@
   "entry_date": "2026-10-13",
   "entry_price": 304.0
  },
+ "TATACOMM": {
+  "entry_date": "2026-10-15",
+  "entry_price": 1763.7
+ },
  "TATAELXSI": {
   "entry_date": "2026-10-14",
   "entry_price": 3623.1
@@ -103,9 +119,17 @@
   "entry_date": "2026-10-13",
   "entry_price": 2269.3
  },
+ "TECHM": {
+  "entry_date": "2026-10-15",
+  "entry_price": 1650.0
+ },
  "WELSPUNLIV": {
   "entry_date": "2026-10-14",
   "entry_price": 229.58
+ },
+ "WIPRO": {
+  "entry_date": "2026-10-15",
+  "entry_price": 174.05
  },
  "ZENSARTECH": {
   "entry_date": "2026-10-13",
