@@ -7,10 +7,6 @@
   "entry_date": "2026-10-13",
   "entry_price": 310.0
  },
- "AXISBANK": {
-  "entry_date": "2026-10-15",
-  "entry_price": 1288.0
- },
  "BALRAMCHIN": {
   "entry_date": "2026-10-15",
   "entry_price": 726.0
@@ -54,6 +50,10 @@
  "ELECON": {
   "entry_date": "2026-10-14",
   "entry_price": 486.9
+ },
+ "FEDERALBNK": {
+  "entry_date": "2026-10-19",
+  "entry_price": 348.85
  },
  "FSL": {
   "entry_date": "2026-10-13",
@@ -131,6 +131,10 @@
   "entry_date": "2026-10-14",
   "entry_price": 185.26
  },
+ "PNB": {
+  "entry_date": "2026-10-19",
+  "entry_price": 121.9
+ },
  "PNBHOUSING": {
   "entry_date": "2026-10-13",
   "entry_price": 1224.8
@@ -139,21 +143,17 @@
   "entry_date": "2026-10-13",
   "entry_price": 1404.5
  },
- "RITES": {
-  "entry_date": "2026-10-15",
-  "entry_price": 214.27
- },
  "SHYAMMETL": {
   "entry_date": "2026-10-14",
   "entry_price": 1141.6
  },
+ "SYNGENE": {
+  "entry_date": "2026-10-19",
+  "entry_price": 397.5
+ },
  "TARIL": {
   "entry_date": "2026-10-13",
   "entry_price": 304.0
- },
- "TATACOMM": {
-  "entry_date": "2026-10-15",
-  "entry_price": 1763.7
  },
  "TATAELXSI": {
   "entry_date": "2026-10-14",
