@@ -1,12 +1,4 @@
 {
- "AIIL": {
-  "entry_date": "2026-10-16",
-  "entry_price": 571.9
- },
- "ANGELONE": {
-  "entry_date": "2026-10-13",
-  "entry_price": 310.0
- },
  "BALRAMCHIN": {
   "entry_date": "2026-10-15",
   "entry_price": 726.0
@@ -23,10 +15,6 @@
   "entry_date": "2026-10-14",
   "entry_price": 1570.3
  },
- "BHEL": {
-  "entry_date": "2026-10-14",
-  "entry_price": 464.0
- },
  "BSOFT": {
   "entry_date": "2026-10-13",
   "entry_price": 296.75
@@ -39,6 +27,10 @@
   "entry_date": "2026-10-13",
   "entry_price": 1929.0
  },
+ "CUPID": {
+  "entry_date": "2026-10-21",
+  "entry_price": 340.75
+ },
  "DRREDDY": {
   "entry_date": "2026-10-13",
   "entry_price": 1240.0
@@ -46,10 +38,6 @@
  "ECLERX": {
   "entry_date": "2026-10-15",
   "entry_price": 1998.2
- },
- "ELECON": {
-  "entry_date": "2026-10-14",
-  "entry_price": 486.9
  },
  "FEDERALBNK": {
   "entry_date": "2026-10-19",
@@ -71,10 +59,6 @@
   "entry_date": "2026-10-13",
   "entry_price": 3091.1
  },
- "GROWW": {
-  "entry_date": "2026-10-16",
-  "entry_price": 200.85
- },
  "HAL": {
   "entry_date": "2026-10-16",
   "entry_price": 4989.0
@@ -94,10 +78,6 @@
  "INFY": {
   "entry_date": "2026-10-15",
   "entry_price": 1110.0
- },
- "JINDALSAW": {
-  "entry_date": "2026-10-16",
-  "entry_price": 301.55
  },
  "KARURVYSYA": {
   "entry_date": "2026-10-13",
@@ -127,9 +107,9 @@
   "entry_date": "2026-10-13",
   "entry_price": 2466.3
  },
- "MRPL": {
-  "entry_date": "2026-10-14",
-  "entry_price": 185.26
+ "PERSISTENT": {
+  "entry_date": "2026-10-21",
+  "entry_price": 5858.5
  },
  "PNB": {
   "entry_date": "2026-10-19",
@@ -146,10 +126,6 @@
  "SHYAMMETL": {
   "entry_date": "2026-10-14",
   "entry_price": 1141.6
- },
- "SYNGENE": {
-  "entry_date": "2026-10-19",
-  "entry_price": 397.5
  },
  "TARIL": {
   "entry_date": "2026-10-13",
