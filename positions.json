@@ -3,10 +3,6 @@
   "entry_date": "2026-10-22",
   "entry_price": 2223.0
  },
- "BBOX": {
-  "entry_date": "2026-10-16",
-  "entry_price": 907.25
- },
  "BHARTIARTL": {
   "entry_date": "2026-10-16",
   "entry_price": 1905.0
@@ -31,6 +27,10 @@
   "entry_date": "2026-10-21",
   "entry_price": 340.75
  },
+ "CYIENT": {
+  "entry_date": "2026-10-23",
+  "entry_price": 1233.0
+ },
  "DRREDDY": {
   "entry_date": "2026-10-13",
   "entry_price": 1240.0
@@ -46,14 +46,6 @@
  "FSL": {
   "entry_date": "2026-10-13",
   "entry_price": 291.75
- },
- "GLAND": {
-  "entry_date": "2026-10-13",
-  "entry_price": 3091.1
- },
- "HAL": {
-  "entry_date": "2026-10-16",
-  "entry_price": 4989.0
  },
  "HBLENGINE": {
   "entry_date": "2026-10-16",
@@ -83,14 +75,6 @@
   "entry_date": "2026-10-16",
   "entry_price": 2060.1
  },
- "LEMONTREE": {
-  "entry_date": "2026-10-13",
-  "entry_price": 111.86
- },
- "LTM": {
-  "entry_date": "2026-10-16",
-  "entry_price": 4390.0
- },
  "LTTS": {
   "entry_date": "2026-10-14",
   "entry_price": 3613.4
@@ -110,10 +94,6 @@
  "PNB": {
   "entry_date": "2026-10-19",
   "entry_price": 121.9
- },
- "PNBHOUSING": {
-  "entry_date": "2026-10-13",
-  "entry_price": 1224.8
  },
  "PVRINOX": {
   "entry_date": "2026-10-13",
