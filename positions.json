@@ -1,7 +1,19 @@
 {
+ "ACUTAAS": {
+  "entry_date": "2026-10-27",
+  "entry_price": 3793.3
+ },
  "ANANDRATHI": {
   "entry_date": "2026-10-22",
   "entry_price": 2223.0
+ },
+ "ATHERENERG": {
+  "entry_date": "2026-10-27",
+  "entry_price": 1674.0
+ },
+ "BATAINDIA": {
+  "entry_date": "2026-10-27",
+  "entry_price": 662.4
  },
  "BHARTIARTL": {
   "entry_date": "2026-10-16",
@@ -15,9 +27,17 @@
   "entry_date": "2026-10-13",
   "entry_price": 296.75
  },
+ "CHENNPETRO": {
+  "entry_date": "2026-10-27",
+  "entry_price": 1573.8
+ },
  "COFORGE": {
   "entry_date": "2026-10-13",
   "entry_price": 1929.0
+ },
+ "COHANCE": {
+  "entry_date": "2026-10-27",
+  "entry_price": 479.25
  },
  "CRISIL": {
   "entry_date": "2026-10-22",
@@ -71,6 +91,10 @@
   "entry_date": "2026-10-13",
   "entry_price": 348.6
  },
+ "KOTAKBANK": {
+  "entry_date": "2026-10-27",
+  "entry_price": 442.5
+ },
  "LAURUSLABS": {
   "entry_date": "2026-10-16",
   "entry_price": 2060.1
@@ -86,6 +110,14 @@
  "MPHASIS": {
   "entry_date": "2026-10-13",
   "entry_price": 2466.3
+ },
+ "MRPL": {
+  "entry_date": "2026-10-27",
+  "entry_price": 189.44
+ },
+ "ONESOURCE": {
+  "entry_date": "2026-10-27",
+  "entry_price": 1589.8
  },
  "PERSISTENT": {
   "entry_date": "2026-10-21",
@@ -106,6 +138,14 @@
  "SHYAMMETL": {
   "entry_date": "2026-10-14",
   "entry_price": 1141.6
+ },
+ "SONACOMS": {
+  "entry_date": "2026-10-27",
+  "entry_price": 851.85
+ },
+ "SUNTV": {
+  "entry_date": "2026-10-27",
+  "entry_price": 634.55
  },
  "TATAELXSI": {
   "entry_date": "2026-10-14",
