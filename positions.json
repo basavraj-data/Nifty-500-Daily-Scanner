@@ -23,6 +23,14 @@
   "entry_date": "2026-10-14",
   "entry_price": 1570.3
  },
+ "BOSCHLTD": {
+  "entry_date": "2026-10-28",
+  "entry_price": 47625.0
+ },
+ "BSE": {
+  "entry_date": "2026-10-28",
+  "entry_price": 3485.0
+ },
  "BSOFT": {
   "entry_date": "2026-10-13",
   "entry_price": 296.75
@@ -66,6 +74,10 @@
  "FSL": {
   "entry_date": "2026-10-13",
   "entry_price": 291.75
+ },
+ "GESHIP": {
+  "entry_date": "2026-10-28",
+  "entry_price": 1559.9
  },
  "HBLENGINE": {
   "entry_date": "2026-10-16",
@@ -127,13 +139,13 @@
   "entry_date": "2026-10-19",
   "entry_price": 121.9
  },
+ "PPLPHARMA": {
+  "entry_date": "2026-10-28",
+  "entry_price": 232.8
+ },
  "PVRINOX": {
   "entry_date": "2026-10-13",
   "entry_price": 1404.5
- },
- "SHREECEM": {
-  "entry_date": "2026-10-26",
-  "entry_price": 23540.0
  },
  "SHYAMMETL": {
   "entry_date": "2026-10-14",
@@ -146,6 +158,10 @@
  "SUNTV": {
   "entry_date": "2026-10-27",
   "entry_price": 634.55
+ },
+ "SYNGENE": {
+  "entry_date": "2026-10-28",
+  "entry_price": 410.85
  },
  "TATAELXSI": {
   "entry_date": "2026-10-14",
@@ -162,6 +178,10 @@
  "TTML": {
   "entry_date": "2026-10-22",
   "entry_price": 38.01
+ },
+ "TVSMOTOR": {
+  "entry_date": "2026-10-28",
+  "entry_price": 4239.9
  },
  "UNIONBANK": {
   "entry_date": "2026-10-22",
