@@ -51,14 +51,6 @@
   "entry_date": "2026-10-13",
   "entry_price": 1929.0
  },
- "COHANCE": {
-  "entry_date": "2026-10-27",
-  "entry_price": 479.25
- },
- "CRISIL": {
-  "entry_date": "2026-10-22",
-  "entry_price": 4777.2
- },
  "CUPID": {
   "entry_date": "2026-10-21",
   "entry_price": 340.75
@@ -78,6 +70,10 @@
  "DRREDDY": {
   "entry_date": "2026-10-13",
   "entry_price": 1240.0
+ },
+ "ETERNAL": {
+  "entry_date": "2026-10-30",
+  "entry_price": 343.65
  },
  "FEDERALBNK": {
   "entry_date": "2026-10-19",
@@ -127,6 +123,10 @@
   "entry_date": "2026-10-16",
   "entry_price": 2060.1
  },
+ "LT": {
+  "entry_date": "2026-10-30",
+  "entry_price": 3871.7
+ },
  "LTTS": {
   "entry_date": "2026-10-14",
   "entry_price": 3613.4
@@ -155,10 +155,6 @@
   "entry_date": "2026-10-27",
   "entry_price": 1589.8
  },
- "PATANJALI": {
-  "entry_date": "2026-10-29",
-  "entry_price": 378.8
- },
  "PERSISTENT": {
   "entry_date": "2026-10-21",
   "entry_price": 5858.5
@@ -167,6 +163,10 @@
   "entry_date": "2026-10-19",
   "entry_price": 121.9
  },
+ "POWERGRID": {
+  "entry_date": "2026-10-30",
+  "entry_price": 265.0
+ },
  "PPLPHARMA": {
   "entry_date": "2026-10-28",
   "entry_price": 232.8
@@ -174,6 +174,10 @@
  "PVRINOX": {
   "entry_date": "2026-10-13",
   "entry_price": 1404.5
+ },
+ "SAILIFE": {
+  "entry_date": "2026-10-30",
+  "entry_price": 1557.5
  },
  "SHYAMMETL": {
   "entry_date": "2026-10-14",
@@ -206,6 +210,10 @@
  "TECHM": {
   "entry_date": "2026-10-15",
   "entry_price": 1650.0
+ },
+ "TRENT": {
+  "entry_date": "2026-10-30",
+  "entry_price": 3017.3
  },
  "TVSMOTOR": {
   "entry_date": "2026-10-28",
