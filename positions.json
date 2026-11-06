@@ -87,6 +87,10 @@
   "entry_date": "2026-11-05",
   "entry_price": 1280.0
  },
+ "BAJAJ-AUTO": {
+  "entry_date": "2026-11-06",
+  "entry_price": 10900.0
+ },
  "BAJAJFINSV": {
   "entry_date": "2026-11-05",
   "entry_price": 1835.0
@@ -106,14 +110,6 @@
  "BEL": {
   "entry_date": "2026-11-04",
   "entry_price": 398.0
- },
- "BEML": {
-  "entry_date": "2026-11-04",
-  "entry_price": 2123.0
- },
- "BERGEPAINT": {
-  "entry_date": "2026-11-04",
-  "entry_price": 485.1
  },
  "BHARTIARTL": {
   "entry_date": "2026-10-16",
@@ -155,13 +151,13 @@
   "entry_date": "2026-11-05",
   "entry_price": 1760.0
  },
+ "CHOLAHLDNG": {
+  "entry_date": "2026-11-06",
+  "entry_price": 1454.6
+ },
  "COFORGE": {
   "entry_date": "2026-10-13",
   "entry_price": 1929.0
- },
- "COROMANDEL": {
-  "entry_date": "2026-11-05",
-  "entry_price": 1900.0
  },
  "CUPID": {
   "entry_date": "2026-10-21",
@@ -206,10 +202,6 @@
  "ETERNAL": {
   "entry_date": "2026-10-30",
   "entry_price": 343.65
- },
- "FACT": {
-  "entry_date": "2026-11-04",
-  "entry_price": 764.05
  },
  "FLUOROCHEM": {
   "entry_date": "2026-11-04",
@@ -263,6 +255,10 @@
   "entry_date": "2026-11-04",
   "entry_price": 5079.1
  },
+ "HAVELLS": {
+  "entry_date": "2026-11-06",
+  "entry_price": 1128.0
+ },
  "HBLENGINE": {
   "entry_date": "2026-10-16",
   "entry_price": 833.15
@@ -279,9 +275,17 @@
   "entry_date": "2026-11-04",
   "entry_price": 736.7
  },
+ "HDFCLIFE": {
+  "entry_date": "2026-11-06",
+  "entry_price": 565.3
+ },
  "HEROMOTOCO": {
   "entry_date": "2026-11-05",
   "entry_price": 5514.0
+ },
+ "HINDALCO": {
+  "entry_date": "2026-11-06",
+  "entry_price": 958.4
  },
  "HINDPETRO": {
   "entry_date": "2026-11-04",
@@ -335,6 +339,10 @@
   "entry_date": "2026-11-03",
   "entry_price": 138.67
  },
+ "IREDA": {
+  "entry_date": "2026-11-06",
+  "entry_price": 111.46
+ },
  "ITC": {
   "entry_date": "2026-11-03",
   "entry_price": 273.9
@@ -366,6 +374,14 @@
  "JUBLFOOD": {
   "entry_date": "2026-11-05",
   "entry_price": 456.5
+ },
+ "KALYANKJIL": {
+  "entry_date": "2026-11-06",
+  "entry_price": 590.75
+ },
+ "KARURVYSYA": {
+  "entry_date": "2026-11-06",
+  "entry_price": 370.05
  },
  "KFINTECH": {
   "entry_date": "2026-11-05",
@@ -426,6 +442,10 @@
  "M&M": {
   "entry_date": "2026-11-05",
   "entry_price": 3127.5
+ },
+ "MAHABANK": {
+  "entry_date": "2026-11-06",
+  "entry_price": 86.91
  },
  "MANKIND": {
   "entry_date": "2026-11-04",
@@ -603,9 +623,9 @@
   "entry_date": "2026-10-14",
   "entry_price": 3623.1
  },
- "TATAPOWER": {
-  "entry_date": "2026-11-05",
-  "entry_price": 364.55
+ "TATASTEEL": {
+  "entry_date": "2026-11-06",
+  "entry_price": 186.3
  },
  "TCS": {
   "entry_date": "2026-10-13",
@@ -615,13 +635,13 @@
   "entry_date": "2026-10-15",
   "entry_price": 1650.0
  },
- "TIMKEN": {
-  "entry_date": "2026-11-05",
-  "entry_price": 3124.6
- },
  "TITAN": {
   "entry_date": "2026-11-04",
   "entry_price": 4754.4
+ },
+ "TORNTPOWER": {
+  "entry_date": "2026-11-06",
+  "entry_price": 1271.1
  },
  "TRENT": {
   "entry_date": "2026-10-30",
@@ -630,6 +650,10 @@
  "TRIDENT": {
   "entry_date": "2026-11-03",
   "entry_price": 23.79
+ },
+ "TTML": {
+  "entry_date": "2026-11-06",
+  "entry_price": 39.77
  },
  "TVSMOTOR": {
   "entry_date": "2026-10-28",
@@ -647,17 +671,9 @@
   "entry_date": "2026-11-04",
   "entry_price": 1196.9
  },
- "VEDL": {
-  "entry_date": "2026-11-05",
-  "entry_price": 263.8
- },
  "VEDPOWER": {
   "entry_date": "2026-11-04",
   "entry_price": 35.77
- },
- "VOLTAS": {
-  "entry_date": "2026-11-05",
-  "entry_price": 1115.4
  },
  "WELSPUNLIV": {
   "entry_date": "2026-10-14",
