@@ -75,6 +75,10 @@
   "entry_date": "2026-11-05",
   "entry_price": 2523.8
  },
+ "ASTERDM": {
+  "entry_date": "2026-11-08",
+  "entry_price": 749.35
+ },
  "ATHERENERG": {
   "entry_date": "2026-10-27",
   "entry_price": 1674.0
@@ -159,6 +163,10 @@
   "entry_date": "2026-10-13",
   "entry_price": 1929.0
  },
+ "CPPLUS": {
+  "entry_date": "2026-11-08",
+  "entry_price": 4212.6
+ },
  "CUPID": {
   "entry_date": "2026-10-21",
   "entry_price": 340.75
@@ -179,6 +187,10 @@
   "entry_date": "2026-10-29",
   "entry_price": 694.35
  },
+ "DOMS": {
+  "entry_date": "2026-11-08",
+  "entry_price": 2091.6
+ },
  "DRREDDY": {
   "entry_date": "2026-10-13",
   "entry_price": 1240.0
@@ -190,6 +202,10 @@
  "EIHOTEL": {
   "entry_date": "2026-11-05",
   "entry_price": 307.75
+ },
+ "EMAMILTD": {
+  "entry_date": "2026-11-08",
+  "entry_price": 391.3
  },
  "EMCURE": {
   "entry_date": "2026-11-03",
@@ -315,6 +331,10 @@
   "entry_date": "2026-10-22",
   "entry_price": 353.2
  },
+ "IIFL": {
+  "entry_date": "2026-11-08",
+  "entry_price": 629.75
+ },
  "INDHOTEL": {
   "entry_date": "2026-10-16",
   "entry_price": 772.1
@@ -427,9 +447,9 @@
   "entry_date": "2026-10-30",
   "entry_price": 3871.7
  },
- "LTF": {
-  "entry_date": "2026-11-05",
-  "entry_price": 278.59
+ "LTFOODS": {
+  "entry_date": "2026-11-08",
+  "entry_price": 423.35
  },
  "LTM": {
   "entry_date": "2026-11-05",
@@ -571,6 +591,14 @@
   "entry_date": "2026-10-13",
   "entry_price": 1404.5
  },
+ "RAMCOCEM": {
+  "entry_date": "2026-11-08",
+  "entry_price": 836.1
+ },
+ "RUBICON": {
+  "entry_date": "2026-11-08",
+  "entry_price": 1730.8
+ },
  "SAILIFE": {
   "entry_date": "2026-10-30",
   "entry_price": 1557.5
@@ -591,6 +619,10 @@
   "entry_date": "2026-10-14",
   "entry_price": 1141.6
  },
+ "SIGNATURE": {
+  "entry_date": "2026-11-08",
+  "entry_price": 755.3
+ },
  "SOBHA": {
   "entry_date": "2026-11-05",
   "entry_price": 1291.9
@@ -598,6 +630,10 @@
  "SONACOMS": {
   "entry_date": "2026-10-27",
   "entry_price": 851.85
+ },
+ "STARHEALTH": {
+  "entry_date": "2026-11-08",
+  "entry_price": 568.55
  },
  "SUNPHARMA": {
   "entry_date": "2026-11-05",
