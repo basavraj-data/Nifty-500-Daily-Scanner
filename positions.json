@@ -3,13 +3,13 @@
   "entry_date": "2026-11-05",
   "entry_price": 1140.9
  },
- "ABBOTINDIA": {
-  "entry_date": "2026-11-04",
-  "entry_price": 27120.0
- },
  "ABCAPITAL": {
   "entry_date": "2026-11-05",
   "entry_price": 396.1
+ },
+ "ABDL": {
+  "entry_date": "2026-11-11",
+  "entry_price": 736.5
  },
  "ACC": {
   "entry_date": "2026-11-05",
@@ -99,6 +99,10 @@
   "entry_date": "2026-11-05",
   "entry_price": 1835.0
  },
+ "BAJAJHLDNG": {
+  "entry_date": "2026-11-11",
+  "entry_price": 11340.0
+ },
  "BAJFINANCE": {
   "entry_date": "2026-11-05",
   "entry_price": 1070.0
@@ -139,6 +143,10 @@
   "entry_date": "2026-10-13",
   "entry_price": 296.75
  },
+ "CANFINHOME": {
+  "entry_date": "2026-11-11",
+  "entry_price": 777.05
+ },
  "CDSL": {
   "entry_date": "2026-11-05",
   "entry_price": 1334.0
@@ -163,6 +171,10 @@
   "entry_date": "2026-10-13",
   "entry_price": 1929.0
  },
+ "COROMANDEL": {
+  "entry_date": "2026-11-11",
+  "entry_price": 1991.0
+ },
  "CPPLUS": {
   "entry_date": "2026-11-08",
   "entry_price": 4212.6
@@ -179,6 +191,10 @@
   "entry_date": "2026-11-05",
   "entry_price": 430.05
  },
+ "DEVYANI": {
+  "entry_date": "2026-11-11",
+  "entry_price": 132.03
+ },
  "DIVISLAB": {
   "entry_date": "2026-10-29",
   "entry_price": 9664.0
@@ -186,10 +202,6 @@
  "DLF": {
   "entry_date": "2026-10-29",
   "entry_price": 694.35
- },
- "DOMS": {
-  "entry_date": "2026-11-08",
-  "entry_price": 2091.6
  },
  "DRREDDY": {
   "entry_date": "2026-10-13",
@@ -219,6 +231,14 @@
   "entry_date": "2026-10-30",
   "entry_price": 343.65
  },
+ "FACT": {
+  "entry_date": "2026-11-11",
+  "entry_price": 813.25
+ },
+ "FEDERALBNK": {
+  "entry_date": "2026-11-11",
+  "entry_price": 361.6
+ },
  "FLUOROCHEM": {
   "entry_date": "2026-11-04",
   "entry_price": 4613.3
@@ -234,10 +254,6 @@
  "FSL": {
   "entry_date": "2026-10-13",
   "entry_price": 291.75
- },
- "GICRE": {
-  "entry_date": "2026-11-05",
-  "entry_price": 339.25
  },
  "GILLETTE": {
   "entry_date": "2026-11-04",
@@ -323,9 +339,17 @@
   "entry_date": "2026-11-04",
   "entry_price": 2063.0
  },
+ "ICICIAMC": {
+  "entry_date": "2026-11-11",
+  "entry_price": 3113.0
+ },
  "ICICIBANK": {
   "entry_date": "2026-11-03",
   "entry_price": 1424.5
+ },
+ "IEX": {
+  "entry_date": "2026-11-11",
+  "entry_price": 114.05
  },
  "IGIL": {
   "entry_date": "2026-10-22",
@@ -351,6 +375,10 @@
   "entry_date": "2026-11-03",
   "entry_price": 5025.0
  },
+ "INDUSTOWER": {
+  "entry_date": "2026-11-11",
+  "entry_price": 397.5
+ },
  "INFY": {
   "entry_date": "2026-10-15",
   "entry_price": 1110.0
@@ -358,6 +386,10 @@
  "IOC": {
   "entry_date": "2026-11-03",
   "entry_price": 138.67
+ },
+ "IRCTC": {
+  "entry_date": "2026-11-11",
+  "entry_price": 472.1
  },
  "IREDA": {
   "entry_date": "2026-11-06",
@@ -390,10 +422,6 @@
  "JSWENERGY": {
   "entry_date": "2026-11-05",
   "entry_price": 523.35
- },
- "JUBLFOOD": {
-  "entry_date": "2026-11-05",
-  "entry_price": 456.5
  },
  "KALYANKJIL": {
   "entry_date": "2026-11-06",
@@ -451,10 +479,6 @@
   "entry_date": "2026-11-08",
   "entry_price": 423.35
  },
- "LTM": {
-  "entry_date": "2026-11-05",
-  "entry_price": 4393.0
- },
  "LTTS": {
   "entry_date": "2026-10-14",
   "entry_price": 3613.4
@@ -507,10 +531,6 @@
   "entry_date": "2026-11-05",
   "entry_price": 1095.0
  },
- "MPHASIS": {
-  "entry_date": "2026-10-13",
-  "entry_price": 2466.3
- },
  "MRF": {
   "entry_date": "2026-11-05",
   "entry_price": 125920.0
@@ -522,6 +542,10 @@
  "MUTHOOTFIN": {
   "entry_date": "2026-11-05",
   "entry_price": 2839.0
+ },
+ "NAM-INDIA": {
+  "entry_date": "2026-11-11",
+  "entry_price": 1088.0
  },
  "NAVINFLUOR": {
   "entry_date": "2026-11-05",
@@ -575,6 +599,10 @@
   "entry_date": "2026-10-19",
   "entry_price": 121.9
  },
+ "POLYMED": {
+  "entry_date": "2026-11-11",
+  "entry_price": 1673.4
+ },
  "POONAWALLA": {
   "entry_date": "2026-11-05",
   "entry_price": 474.95
@@ -591,13 +619,25 @@
   "entry_date": "2026-10-13",
   "entry_price": 1404.5
  },
+ "RAILTEL": {
+  "entry_date": "2026-11-11",
+  "entry_price": 258.27
+ },
  "RAMCOCEM": {
   "entry_date": "2026-11-08",
   "entry_price": 836.1
  },
+ "RKFORGE": {
+  "entry_date": "2026-11-11",
+  "entry_price": 764.7
+ },
  "RUBICON": {
   "entry_date": "2026-11-08",
   "entry_price": 1730.8
+ },
+ "RVNL": {
+  "entry_date": "2026-11-11",
+  "entry_price": 209.4
  },
  "SAILIFE": {
   "entry_date": "2026-10-30",
@@ -619,9 +659,9 @@
   "entry_date": "2026-10-14",
   "entry_price": 1141.6
  },
- "SIGNATURE": {
-  "entry_date": "2026-11-08",
-  "entry_price": 755.3
+ "SJVN": {
+  "entry_date": "2026-11-11",
+  "entry_price": 59.56
  },
  "SOBHA": {
   "entry_date": "2026-11-05",
@@ -671,13 +711,13 @@
   "entry_date": "2026-10-15",
   "entry_price": 1650.0
  },
+ "TECHNOE": {
+  "entry_date": "2026-11-11",
+  "entry_price": 971.05
+ },
  "TITAN": {
   "entry_date": "2026-11-04",
   "entry_price": 4754.4
- },
- "TORNTPOWER": {
-  "entry_date": "2026-11-06",
-  "entry_price": 1271.1
  },
  "TRENT": {
   "entry_date": "2026-10-30",
@@ -707,9 +747,17 @@
   "entry_date": "2026-11-04",
   "entry_price": 1196.9
  },
+ "VEDL": {
+  "entry_date": "2026-11-11",
+  "entry_price": 263.88
+ },
  "VEDPOWER": {
   "entry_date": "2026-11-04",
   "entry_price": 35.77
+ },
+ "VOLTAS": {
+  "entry_date": "2026-11-11",
+  "entry_price": 1122.7
  },
  "WELSPUNLIV": {
   "entry_date": "2026-10-14",
@@ -722,6 +770,10 @@
  "ZENSARTECH": {
   "entry_date": "2026-10-13",
   "entry_price": 478.9
+ },
+ "ZENTEC": {
+  "entry_date": "2026-11-11",
+  "entry_price": 1761.2
  },
  "ZFCVINDIA": {
   "entry_date": "2026-11-05",
