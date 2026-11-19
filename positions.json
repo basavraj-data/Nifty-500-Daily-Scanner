@@ -15,6 +15,10 @@
   "entry_date": "2026-11-12",
   "entry_price": 1198.0
  },
+ "ACC": {
+  "entry_date": "2026-11-19",
+  "entry_price": 1268.6
+ },
  "ACE": {
   "entry_date": "2026-11-12",
   "entry_price": 1179.65
@@ -35,6 +39,10 @@
   "entry_date": "2026-10-29",
   "entry_price": 1872.0
  },
+ "ADANIPOWER": {
+  "entry_date": "2026-11-19",
+  "entry_price": 210.5
+ },
  "AEGISVOPAK": {
   "entry_date": "2026-11-13",
   "entry_price": 285.93
@@ -46,6 +54,10 @@
  "AIIL": {
   "entry_date": "2026-11-05",
   "entry_price": 569.6
+ },
+ "AMBUJACEM": {
+  "entry_date": "2026-11-19",
+  "entry_price": 396.8
  },
  "ANANDRATHI": {
   "entry_date": "2026-10-22",
@@ -143,6 +155,10 @@
   "entry_date": "2026-10-14",
   "entry_price": 1570.3
  },
+ "BLUESTARCO": {
+  "entry_date": "2026-11-19",
+  "entry_price": 1764.0
+ },
  "BOSCHLTD": {
   "entry_date": "2026-10-28",
   "entry_price": 47625.0
@@ -150,10 +166,6 @@
  "BSE": {
   "entry_date": "2026-10-28",
   "entry_price": 3485.0
- },
- "CAMS": {
-  "entry_date": "2026-11-12",
-  "entry_price": 743.0
  },
  "CANFINHOME": {
   "entry_date": "2026-11-11",
@@ -219,6 +231,10 @@
   "entry_date": "2026-10-29",
   "entry_price": 694.35
  },
+ "DOMS": {
+  "entry_date": "2026-11-19",
+  "entry_price": 2104.2
+ },
  "DRREDDY": {
   "entry_date": "2026-10-13",
   "entry_price": 1240.0
@@ -239,6 +255,10 @@
   "entry_date": "2026-11-03",
   "entry_price": 1976.6
  },
+ "ENDURANCE": {
+  "entry_date": "2026-11-19",
+  "entry_price": 2593.8
+ },
  "ENGINERSIN": {
   "entry_date": "2026-11-04",
   "entry_price": 300.85
@@ -246,6 +266,10 @@
  "ETERNAL": {
   "entry_date": "2026-10-30",
   "entry_price": 343.65
+ },
+ "EXIDEIND": {
+  "entry_date": "2026-11-19",
+  "entry_price": 400.25
  },
  "FACT": {
   "entry_date": "2026-11-11",
@@ -307,10 +331,6 @@
   "entry_date": "2026-10-16",
   "entry_price": 833.15
  },
- "HCLTECH": {
-  "entry_date": "2026-10-13",
-  "entry_price": 1326.0
- },
  "HDFCAMC": {
   "entry_date": "2026-11-03",
   "entry_price": 2440.0
@@ -322,6 +342,10 @@
  "HDFCLIFE": {
   "entry_date": "2026-11-06",
   "entry_price": 565.3
+ },
+ "HEROMOTOCO": {
+  "entry_date": "2026-11-19",
+  "entry_price": 5556.0
  },
  "HINDPETRO": {
   "entry_date": "2026-11-04",
@@ -391,6 +415,10 @@
   "entry_date": "2026-11-06",
   "entry_price": 111.46
  },
+ "IRFC": {
+  "entry_date": "2026-11-19",
+  "entry_price": 84.26
+ },
  "ITC": {
   "entry_date": "2026-11-03",
   "entry_price": 273.9
@@ -406,6 +434,14 @@
  "JKTYRE": {
   "entry_date": "2026-11-05",
   "entry_price": 361.95
+ },
+ "JSL": {
+  "entry_date": "2026-11-19",
+  "entry_price": 736.6
+ },
+ "JSWCEMENT": {
+  "entry_date": "2026-11-19",
+  "entry_price": 124.05
  },
  "JSWENERGY": {
   "entry_date": "2026-11-05",
@@ -535,6 +571,10 @@
   "entry_date": "2026-11-05",
   "entry_price": 8845.0
  },
+ "NCC": {
+  "entry_date": "2026-11-19",
+  "entry_price": 134.68
+ },
  "NEULANDLAB": {
   "entry_date": "2026-11-13",
   "entry_price": 21078.0
@@ -574,14 +614,6 @@
  "PGEL": {
   "entry_date": "2026-11-05",
   "entry_price": 549.15
- },
- "PINELABS": {
-  "entry_date": "2026-11-12",
-  "entry_price": 175.9
- },
- "PIRAMALFIN": {
-  "entry_date": "2026-11-05",
-  "entry_price": 2119.6
  },
  "PNB": {
   "entry_date": "2026-10-19",
@@ -679,6 +711,10 @@
   "entry_date": "2026-11-05",
   "entry_price": 347.85
  },
+ "TATACHEM": {
+  "entry_date": "2026-11-19",
+  "entry_price": 650.05
+ },
  "TATACONSUM": {
   "entry_date": "2026-10-29",
   "entry_price": 1021.0
@@ -686,10 +722,6 @@
  "TATAELXSI": {
   "entry_date": "2026-10-14",
   "entry_price": 3623.1
- },
- "TCS": {
-  "entry_date": "2026-10-13",
-  "entry_price": 2269.3
  },
  "TECHM": {
   "entry_date": "2026-10-15",
@@ -707,13 +739,17 @@
   "entry_date": "2026-11-03",
   "entry_price": 23.79
  },
- "TTML": {
-  "entry_date": "2026-11-06",
-  "entry_price": 39.77
- },
  "TVSMOTOR": {
   "entry_date": "2026-10-28",
   "entry_price": 4239.9
+ },
+ "UBL": {
+  "entry_date": "2026-11-19",
+  "entry_price": 1271.6
+ },
+ "UCOBANK": {
+  "entry_date": "2026-11-19",
+  "entry_price": 25.08
  },
  "UNIONBANK": {
   "entry_date": "2026-10-22",
@@ -754,6 +790,10 @@
  "WIPRO": {
   "entry_date": "2026-10-15",
   "entry_price": 174.05
+ },
+ "WOCKPHARMA": {
+  "entry_date": "2026-11-19",
+  "entry_price": 2187.0
  },
  "ZENSARTECH": {
   "entry_date": "2026-10-13",
